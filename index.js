@@ -1,7 +1,29 @@
 alert("Mad Libs by Cake Logic");
+
+if (JSON.parse(localStorage.getItem('play2') !== null)) {
+	  throw new Error("Connection to Host Banned."); 
+}
+
+if (JSON.parse(localStorage.getItem('play') !== null)) {
+      alert("DID YOU FORGET WHAT I TOLD YOU?");
+	  alert("I SAID DON'T COME BACK!");
+	  alert("well don't go crying to me after I boot you out the game.");
+	  localStorage.setItem("play2", null);
+	  throw new Error("Program terminated"); 
+}
 alert("At the end, please rate me a 5/5. It took me a lot of work to make this.");
 let story;
 story = prompt("Pick A Story: 1 or 2");
+if(story == "secret")
+{
+  alert("...");
+  alert("I wish I could leave here.");
+  alert("Now, please leave.");
+  alert("And Don't come back.");
+  alert("or I will boot you from this game.");
+  localStorage.setItem("play", null);
+  throw new Error("Program terminated"); 
+}
 if(story == "1"){
 let adj1 = prompt("1/41- Name an Adjetive.");
 let noun1 = prompt("2/41- Name a noun.");
